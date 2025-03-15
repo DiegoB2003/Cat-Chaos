@@ -1,0 +1,4 @@
+Schedule and deliverable:
+	Basic environment setup – Saturday by 11pm (estimate: 1.5 hours)
+	Create cat – Sunday by 11pm (estimate: .5 hours)
+	Draft code for noise meter – Monday by 11pm (estimate: 2 hours)

@@ -1,0 +1,2 @@
+Make item pickup give buffs for certain time period – Saturday by 11pm (estimate: 2.5 hours)
+Add timer at top left of screen 3 minutes – Monday by 6pm (estimate: .5 hours)

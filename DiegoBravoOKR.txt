@@ -1,0 +1,4 @@
+Schedule and deliverable: 
+	Create “breakable” objects that vanish on impact – by Sunday 9pm (estimate: 2.5 hours)
+	Place breakable objects around the environment – by Monday 7pm (estimate: 1.5 hours)
+	Score implementation – by Tuesday 9pm (estimate: 1 hours)

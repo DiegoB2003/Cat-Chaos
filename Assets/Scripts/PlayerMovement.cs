@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5.0f;
     public float rotationSpeed = 90;
     public float force = 250f;
+    public static float noiseLevel;
 
     Rigidbody rb;
     Transform t;

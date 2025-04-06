@@ -16,9 +16,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 turn; //Vector2 stores direction of the mouse movement
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         t = GetComponent<Transform>();
         Cursor.lockState = CursorLockMode.Locked; //Locks mouse in place and makes it invisible
@@ -35,6 +38,12 @@ public class PlayerMovement : MonoBehaviour
         moveDirection -= Input.GetKey(KeyCode.S) ? transform.forward : Vector3.zero;
         moveDirection += Input.GetKey(KeyCode.D) ? transform.right : Vector3.zero;
         moveDirection -= Input.GetKey(KeyCode.A) ? transform.right : Vector3.zero;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A)) {
+            // Set the trigger value to True for the parameter Dance.
+            anim.SetBool("isMoving", true);
+        } else {
+            anim.SetBool("isMoving", false);
+        }
 
         GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + moveDirection * speed * Time.deltaTime);
 

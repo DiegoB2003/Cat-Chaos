@@ -23,6 +23,8 @@ public class HomeownerAIScript : MonoBehaviour
     //States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+    private bool triggeredChase = false;
+    private Coroutine chaseCoroutine;
 
     private void Awake()
     {
@@ -33,13 +35,28 @@ public class HomeownerAIScript : MonoBehaviour
 
     public void Update()
     {
-        //Check for sight and attack range
+        // Check for proximity
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patrol();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
+        if (playerInAttackRange && playerInSightRange)
+        {
+            // Stop persistent chase if we're ready to attack
+            StopPersistentChase();
+            AttackPlayer();
+        }
+        else if (triggeredChase)
+        {
+            ChasePlayer();
+        }
+        else if (playerInSightRange && !playerInAttackRange)
+        {
+            ChasePlayer();
+        }
+        else if (!playerInSightRange && !playerInAttackRange)
+        {
+            Patrol();
+        }
     }
 
     private void Patrol()
@@ -118,5 +135,25 @@ public class HomeownerAIScript : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+    private IEnumerator StopChasingAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        triggeredChase = false;
+    }
+
+    public void TriggerPersistentChase(float duration)
+    {
+        triggeredChase = true;
+        if (chaseCoroutine != null) StopCoroutine(chaseCoroutine);
+        chaseCoroutine = StartCoroutine(StopChasingAfterTime(duration));
+    }
+
+    private void StopPersistentChase()
+    {
+        triggeredChase = false;
+        if (chaseCoroutine != null) StopCoroutine(chaseCoroutine);
+        chaseCoroutine = null;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 turn; //Vector2 stores direction of the mouse movement
 
     private Animator anim;
+    public HomeownerAIScript ownerAI;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +59,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * force);
+        }
+
+        // Noise level test
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Debug.Log("Triggered pathfinding chase.");
+            ownerAI.TriggerPersistentChase(10);
         }
     }
 

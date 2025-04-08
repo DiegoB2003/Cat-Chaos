@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision) //If player is grounded, set isGrounded to true
+    private void OnCollisionStay(Collision collision) //If player is grounded, set isGrounded to true
     {
         isGrounded = true;
     }

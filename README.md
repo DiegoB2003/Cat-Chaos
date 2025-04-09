@@ -19,5 +19,16 @@ cause chaos, which encourages them to be strategic.
 - Cat Player idle+walk - Diego Bravo
 - Dog NPC idle+walk - Arlette Diaz
 
+### Physics:
+- Speed Boost Power Up (gives player cat more directional force for a duration on collision with power up object)
+- Jump Boost Power Up (gives player cat more jump force for a duration on collision with power up object)
+- Hinge Door (the owner's bedroom has a hinge door that swings open when the owner walks through it)
+
+### Textures:
+There are multiple textures used across the level, such as floor, door, and wall textures.
+
+### Lighting:
+- ADD LIGHTING
+
 # Assignment 5
 [Assignment 5: Design Document, Tools, Sw Prototype and Level Design](https://docs.google.com/document/d/1FLa1F97W0JR0hCHbJc4M_DVPr4UKmouwLH6_qRgPJr4/edit?usp=sharing)

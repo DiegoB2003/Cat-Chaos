@@ -30,7 +30,7 @@ cause chaos, which encourages them to be strategic.
 There are multiple textures used across the level, such as floor, door, and wall textures.
 
 ### Lighting:
-- ADD LIGHTING
+There are multiple light sources used across the level, such as lamps.
 
 # Assignment 5
 [Assignment 5: Design Document, Tools, Sw Prototype and Level Design](https://docs.google.com/document/d/1FLa1F97W0JR0hCHbJc4M_DVPr4UKmouwLH6_qRgPJr4/edit?usp=sharing)

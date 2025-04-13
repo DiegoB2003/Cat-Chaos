@@ -15,10 +15,15 @@ public class DogScript : MonoBehaviour
     private bool isWaiting = true;
     private bool isBarking = false;
 
+    public AudioClip dogBarkSound; //Assign both sounds in the inspector
+    public AudioClip dogWalkSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         //Pick random waypoint as the starting point
         PickNewWaypoint();
@@ -40,18 +45,29 @@ public class DogScript : MonoBehaviour
         {
             animator.SetBool("isWalking", false); //Idle when at waypoint
             isWaiting = true;
+            audioSource.Stop();
         }
     }
 
     IEnumerator BarkAndMove()
     {
-        // isBarking = true;
-        // animator.SetTrigger("isBarking"); //Play bark animation
+        isBarking = true;
+        // animator.SetTrigger("isBarking"); //Play bark animation leave commented for now
+        audioSource.Stop();
+        audioSource.clip = dogBarkSound;
+        audioSource.loop = false;
+        audioSource.Play();
+
         yield return new WaitForSeconds(1f); //Bark duration
 
         //Pick new random waypoint
         PickNewWaypoint();
         agent.SetDestination(currentWaypoint.position);
+        
+        audioSource.Stop();
+        audioSource.clip = dogWalkSound;
+        audioSource.loop = true;
+        audioSource.Play();
 
         animator.SetBool("isWalking", true); //Play walking animation while moving
 

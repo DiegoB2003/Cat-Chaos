@@ -11,57 +11,83 @@ public class PlayerMovement : MonoBehaviour
     public float force = 250f;
     public static float noiseLevel;
 
-    Rigidbody rb;
-    Transform t;
-    bool isGrounded = false; //Check if player is grounded
+    private Rigidbody rb;
+    private Transform t;
+    private bool isGrounded = false;
 
-    public Vector2 turn; //Vector2 stores direction of the mouse movement
+    public Vector2 turn;
 
     private Animator anim;
     public HomeownerAIScript ownerAI;
 
-    // Start is called before the first frame update
+    [Header("Audio")]
+    public AudioSource footstepAudioSource; // Should have loop = true
+    public AudioSource jumpAudioSource;     // Should have loop = false
+    public AudioClip jumpClip;
+
+    // private bool wasMovingLastFrame = false;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         t = GetComponent<Transform>();
-        Cursor.lockState = CursorLockMode.Locked; //Locks mouse in place and makes it invisible
+        Cursor.lockState = CursorLockMode.Locked;
+
+        // Ensure walking audio is looping
+        if (footstepAudioSource != null)
+        {
+            footstepAudioSource.loop = true;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Time.deltaTime represents the time that passed since the last frame
-        //the multiplication below ensures that GameObject moves constant speed every frame
-        Vector3 moveDirection = new Vector3(0, 0, 0);
+        Vector3 moveDirection = Vector3.zero;
 
-        moveDirection += Input.GetKey(KeyCode.W) ? transform.forward : Vector3.zero;
-        moveDirection -= Input.GetKey(KeyCode.S) ? transform.forward : Vector3.zero;
-        moveDirection += Input.GetKey(KeyCode.D) ? transform.right : Vector3.zero;
-        moveDirection -= Input.GetKey(KeyCode.A) ? transform.right : Vector3.zero;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A)) {
-            // Set the trigger value to True for the parameter Dance.
-            anim.SetBool("isMoving", true);
-        } else {
-            anim.SetBool("isMoving", false);
-        }
+        bool isMoving = false;
+        if (Input.GetKey(KeyCode.W)) { moveDirection += transform.forward; isMoving = true; }
+        if (Input.GetKey(KeyCode.S)) { moveDirection -= transform.forward; isMoving = true; }
+        if (Input.GetKey(KeyCode.D)) { moveDirection += transform.right; isMoving = true; }
+        if (Input.GetKey(KeyCode.A)) { moveDirection -= transform.right; isMoving = true; }
 
-        GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + moveDirection * speed * Time.deltaTime);
+        anim.SetBool("isMoving", isMoving);
 
+        // Move player
+        rb.MovePosition(rb.position + moveDirection * speed * Time.deltaTime);
+
+        // Rotate player and camera
         turn.x += Input.GetAxis("Mouse X");
         turn.y += Input.GetAxis("Mouse Y");
-        turn.y = Mathf.Clamp(turn.y, -90, 90); // Clamp the vertical rotation
+        turn.y = Mathf.Clamp(turn.y, -90, 90);
         transform.localRotation = Quaternion.Euler(0, turn.x, 0);
         Camera.main.transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
 
-        //Jump only if grounded
+        // Play/stop walking sound
+        if (isMoving && isGrounded)
+        {
+            if (!footstepAudioSource.isPlaying)
+                footstepAudioSource.Play();
+        }
+        else
+        {
+            if (footstepAudioSource.isPlaying)
+                footstepAudioSource.Stop();
+        }
+
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * force);
+
+            // Play jump sound
+            if (jumpAudioSource != null && jumpClip != null)
+            {
+                jumpAudioSource.PlayOneShot(jumpClip);
+            }
         }
 
-        // Noise level test
+        // Trigger persistent chase
         if (Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Triggered pathfinding chase.");
@@ -69,13 +95,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision) //If player is grounded, set isGrounded to true
+    private void OnCollisionStay(Collision collision)
     {
         isGrounded = true;
     }
 
-    private void OnCollisionExit(Collision collision) //If player is not grounded, set isGrounded to false
+    private void OnCollisionExit(Collision collision)
     {
         isGrounded = false;
+
+        // Stop walking sound if player is airborne
+        if (footstepAudioSource.isPlaying)
+            footstepAudioSource.Stop();
     }
 }

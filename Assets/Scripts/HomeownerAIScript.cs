@@ -19,6 +19,8 @@ public class HomeownerAIScript : MonoBehaviour
     //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public AudioClip swoosh; 
+    private AudioSource audioSource;
 
     //States
     public float sightRange, attackRange;
@@ -126,6 +128,12 @@ public class HomeownerAIScript : MonoBehaviour
         if (!alreadyAttacked)
         {
             //Add attack code here depending on what we want later
+            audioSource.Stop();
+            audioSource.clip = swoosh;
+            audioSource.loop = false;
+            audioSource.Play();
+
+            anim.SetBool("isAttacking", true);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

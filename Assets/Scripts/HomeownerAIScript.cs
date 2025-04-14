@@ -20,7 +20,7 @@ public class HomeownerAIScript : MonoBehaviour
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public AudioClip swoosh; 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
     //States
     public float sightRange, attackRange;

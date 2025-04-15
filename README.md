@@ -5,6 +5,24 @@ CS 426 Final Project
 
 Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 
+# Assignment 7
+### Arlette Diaz:
+- 
+
+### Nick Filipov:
+- Dog Sounds: Added barking sounds for when the player walks to close to Dog because the dog is supposed to make a noise to
+increase the noise meter. Also added walking sounds for the Dog as it walks to its next location.
+- Background Music: Added background music throughout the game so it isn't silent.
+- PowerUp Sounds: Added a sound for each of the 2 PowerUps to indicate to the player that they picked up the powerup and
+what powerup they picked up depending on the sound.
+- PowerUp Effect: I also created a sparkle animation to when the user picks up a PowerUp just for visual feedback.
+- PowerUp UI: I also added 2 PowerUp icons at the bottom left of the screen to show when and which powerup is active
+and also added "Press (E)" text on the screen when looking at a PowerUp to indicate to the players that it is able to
+be picked up/used.
+
+### Diego Bravo:
+- 
+
 # Assignment 6
 **Design and Rationale:** In our game "Cat Chaos", the cat (player) must avoid being caught while causing chaos in the house.
 We used Mecanim and AI techniques, such as pathfinding and FSMs, to make the cat's owner patrol the house and chase the cat.

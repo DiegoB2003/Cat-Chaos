@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!footstepAudioSource.isPlaying)
                 footstepAudioSource.Play();
-                NoiseManager.Instance.AddNoise(.07f); 
+                NoiseManager.Instance.AddNoise(.065f); 
         }
         else
         {

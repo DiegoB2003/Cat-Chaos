@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
@@ -25,10 +27,15 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource jumpAudioSource;     // Should have loop = false
     public AudioClip jumpClip;
 
+    public TMP_Text interactPrompt; //Press E text object
+    public float interactRange = 0.5f;
+
     // private bool wasMovingLastFrame = false;
 
     void Start()
     {
+        interactionVisibility(0f);
+
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         t = GetComponent<Transform>();
@@ -93,6 +100,30 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Triggered pathfinding chase.");
             ownerAI.TriggerPersistentChase(10);
         }
+
+        checkInteractable();
+    }
+
+    private void checkInteractable()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, interactRange)) {
+            if (hit.collider.CompareTag("Interactable")) {
+                interactionVisibility(1f); //Show prompt
+            } else {
+                interactionVisibility(0f); //Hide prompt
+            }
+        } else {
+            interactionVisibility(0f); //Hide prompt
+        }
+    }
+
+    private void interactionVisibility(float alpha) {
+        Color color = interactPrompt.color;
+        color.a = alpha;
+        interactPrompt.color = color;
     }
 
     private void OnCollisionStay(Collision collision)

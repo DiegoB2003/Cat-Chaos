@@ -6,6 +6,7 @@ public class HomeownerAIScript : MonoBehaviour
 {   
     private Animator anim;
     private bool isWaiting = false;
+    private bool isChaseMusicPlaying = false;
 
     public NavMeshAgent agent;
     public Transform player;
@@ -27,6 +28,8 @@ public class HomeownerAIScript : MonoBehaviour
     public bool playerInSightRange, playerInAttackRange;
     private bool triggeredChase = false;
     private Coroutine chaseCoroutine;
+
+    [SerializeField] private SceneAudioManager audioManager;
 
     private void Awake()
     {
@@ -58,6 +61,7 @@ public class HomeownerAIScript : MonoBehaviour
         else if (!playerInSightRange && !playerInAttackRange)
         {
             Patrol();
+            EndChaseMusic();
         }
     }
 
@@ -110,6 +114,7 @@ public class HomeownerAIScript : MonoBehaviour
 
     private void ChasePlayer()
     {
+        TriggerChaseMusic();
         agent.SetDestination(player.position);
         anim.SetBool("isRunning", true);
         anim.SetBool("isWalking", false);
@@ -133,7 +138,7 @@ public class HomeownerAIScript : MonoBehaviour
             audioSource.loop = false;
             audioSource.Play();
 
-            anim.SetBool("isAttacking", true);
+            // anim.SetBool("isAttacking", true);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -163,5 +168,21 @@ public class HomeownerAIScript : MonoBehaviour
         triggeredChase = false;
         if (chaseCoroutine != null) StopCoroutine(chaseCoroutine);
         chaseCoroutine = null;
+    }
+
+    public void TriggerChaseMusic()
+    {
+        if (audioManager != null && !isChaseMusicPlaying) {
+            audioManager.PlayChaseMusic();
+            isChaseMusicPlaying = true;
+        }
+    }
+
+    public void EndChaseMusic()
+    {
+        if (audioManager != null && isChaseMusicPlaying) {
+            audioManager.StopChaseMusicAndResumeBGM();
+            isChaseMusicPlaying = false;
+        }
     }
 }

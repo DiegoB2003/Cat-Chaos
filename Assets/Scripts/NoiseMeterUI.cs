@@ -3,21 +3,17 @@ using UnityEngine.UI;
 
 public class NoiseMeterUI : MonoBehaviour
 {
-    [SerializeField] public Slider noiseSlider;  // Assign the UI slider in the Inspector
-    [SerializeField] public Image fillImage;     // Assign the Fill Area Image of the Slider
-    private float currentNoiseLevel;
-    private float maxNoise = 10f; // Adjust based on game balance
+    [SerializeField] private Slider noiseSlider;
+    [SerializeField] private Image fillImage;
 
     void Update()
     {
-        // Simulate getting noise level from game actions (replace with actual noise tracking)
-        currentNoiseLevel = Mathf.Clamp(PlayerMovement.noiseLevel, 0, maxNoise);
-        
-        // Normalize value for the slider (0 to 100)
-        float noisePercentage = (currentNoiseLevel / maxNoise);
-        noiseSlider.value = noisePercentage * 100;
+        float currentNoiseLevel = NoiseManager.Instance.GetNoiseLevel();
+        float maxNoise = NoiseManager.Instance.GetMaxNoise();
 
-        // Change color from green (safe) to red (danger)
+        float noisePercentage = currentNoiseLevel / maxNoise;
+        noiseSlider.value = noisePercentage * 100f;
+
         fillImage.color = Color.Lerp(Color.green, Color.red, noisePercentage);
     }
 }

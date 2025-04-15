@@ -9270,6 +9270,7 @@ GameObject:
   - component: {fileID: 916137179}
   - component: {fileID: 916137180}
   - component: {fileID: 916137181}
+  - component: {fileID: 916137182}
   m_Layer: 5
   m_Name: NoiseMeterUI
   m_TagString: Untagged
@@ -9344,9 +9345,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 189653066}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 50
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 12
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9364,6 +9365,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noiseSlider: {fileID: 916137180}
   fillImage: {fileID: 1653998323}
+--- !u!114 &916137182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916137178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375b5d0713441184a9a29c4fc2240e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noiseLevel: 0
+  maxNoise: 10
+  decayRate: 1
+  alertThreshold: 7
 --- !u!1001 &934657833
 PrefabInstance:
   m_ObjectHideFlags: 0

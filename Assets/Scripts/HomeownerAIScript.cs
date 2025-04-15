@@ -7,6 +7,10 @@ public class HomeownerAIScript : MonoBehaviour
     private Animator anim;
     private bool isWaiting = false;
     private bool isChaseMusicPlaying = false;
+    private bool noiseTriggered = false;
+    private float noiseTriggerThreshold = 0.8f; // 80%
+    private float stopChaseDistance = 3f; // ~10 feet
+
 
     public NavMeshAgent agent;
     public Transform player;
@@ -38,30 +42,54 @@ public class HomeownerAIScript : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void Update()
+    void Update()
     {
-        // Check for proximity
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+        float currentNoise = NoiseManager.Instance.GetNoiseLevel();
+        float maxNoise = NoiseManager.Instance.GetMaxNoise();
+        float noisePercentage = currentNoise / maxNoise;
 
-        if (playerInAttackRange && playerInSightRange)
+        // === Trigger behavior if noise is too high ===
+        if (!noiseTriggered && noisePercentage >= noiseTriggerThreshold)
         {
-            // Stop persistent chase if we're ready to attack
-            StopPersistentChase();
-            AttackPlayer();
+            noiseTriggered = true;
+
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+            if (playerInAttackRange && playerInSightRange)
+            {
+                StopPersistentChase();
+                AttackPlayer();
+            }
+            else if (distanceToPlayer <= stopChaseDistance)
+            {
+                ChasePlayer();
+            }
+            else
+            {
+                Patrol();
+                EndChaseMusic();
+            }
+            // for later: Play alert animation or sound
+            // anim.SetTrigger("Alerted");
+            // audioSource.PlayOneShot(alertSound);
         }
-        else if (triggeredChase)
+
+        // === Reset trigger if noise drops below buffer threshold ===
+        if (noiseTriggered && noisePercentage < noiseTriggerThreshold - 0.2f)
         {
-            ChasePlayer();
+            noiseTriggered = false;
         }
-        else if (playerInSightRange && !playerInAttackRange)
+
+        // === If not triggered, stay idle ===
+        if (!noiseTriggered)
         {
-            ChasePlayer();
-        }
-        else if (!playerInSightRange && !playerInAttackRange)
-        {
-            Patrol();
-            EndChaseMusic();
+            agent.SetDestination(transform.position);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isWalking", false);
+            return;
         }
     }
 

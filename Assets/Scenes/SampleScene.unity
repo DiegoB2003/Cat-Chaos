@@ -9347,7 +9347,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 12
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9378,9 +9378,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noiseLevel: 0
-  maxNoise: 10
-  decayRate: 1
-  alertThreshold: 7
+  maxNoise: 100
+  decayRate: 5
+  alertThreshold: 10
 --- !u!1001 &934657833
 PrefabInstance:
   m_ObjectHideFlags: 0

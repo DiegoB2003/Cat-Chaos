@@ -36,7 +36,7 @@ public class Target : MonoBehaviour
         Debug.Log($"{gameObject.name} was destroyed due to high impact! Point added.");
         scoreManager.AddScoreGain();
         breakSound.Play();
-        NoiseManager.Instance.AddNoise(30f); // Example value
+        NoiseManager.Instance.AddNoise(25f);
         Destroy(gameObject); // Could also spawn particles, sounds, etc.
     }
 }

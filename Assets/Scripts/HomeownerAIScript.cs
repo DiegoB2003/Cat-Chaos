@@ -86,6 +86,7 @@ public class HomeownerAIScript : MonoBehaviour
 
         if (walkPointSet && !isWaiting)
         {
+            agent.speed = 3.5f;
             agent.SetDestination(walkPoint);
             anim.SetBool("isRunning", false);
             anim.SetBool("isWalking", true);
@@ -130,6 +131,7 @@ public class HomeownerAIScript : MonoBehaviour
     private void ChasePlayer()
     {
         TriggerChaseMusic();
+        agent.speed = 5f; // or whatever faster speed you want for chasing
         agent.SetDestination(player.position);
         anim.SetBool("isRunning", true);
         anim.SetBool("isWalking", false);

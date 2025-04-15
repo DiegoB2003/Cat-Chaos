@@ -6,9 +6,9 @@ public class NoiseManager : MonoBehaviour
 
     [Header("Noise Settings")]
     public float noiseLevel = 0f;
-    public float maxNoise = 10f;
-    public float decayRate = 1f;
-    public float alertThreshold = 7f;
+    public float maxNoise = 100f;
+    public float decayRate = 5f;
+    public float alertThreshold = 10f;
 
     public delegate void AlertOwner();
     public static event AlertOwner OnNoiseAlert;

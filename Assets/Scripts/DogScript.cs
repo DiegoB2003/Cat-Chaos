@@ -57,7 +57,7 @@ public class DogScript : MonoBehaviour
         audioSource.clip = dogBarkSound;
         audioSource.loop = false;
         audioSource.Play();
-        NoiseManager.Instance.AddNoise(10f);
+        NoiseManager.Instance.AddNoise(15f);
 
         yield return new WaitForSeconds(1f); //Bark duration
 

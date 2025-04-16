@@ -7,7 +7,11 @@ Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 
 # Assignment 7
 ### Arlette Diaz:
-- 
+- Attack Sound: Added a woosh audio that plays whenever the owner grabs the player.
+- Chase Music: Added music that plays whenever the owner is in chase mode. This audio makes the game feel more intense. 
+- Glass Breaking Sound: Added a glass shattering sound whenever the player knocks over breakable cups. This audio increases the noise meter since the player is causing the chaos.
+- Noise Meter UI: Added functionality and color to improve visual indicators so the player knows how much noise they are causeing.
+- Glow Effect: Added a new glowing effect to the powerups scattered around the house that the play can easily spot them in our dark enviorment. 
 
 ### Nick Filipov:
 - Dog Sounds: Added barking sounds for when the player walks to close to Dog because the dog is supposed to make a noise to

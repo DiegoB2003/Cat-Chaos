@@ -22,7 +22,11 @@ and also added "Press (E)" text on the screen when looking at a PowerUp to indic
 be picked up/used.
 
 ### Diego Bravo:
-- 
+- Cat Sounds: Added cat walking sound which plays when the player moves and jumping sound which plays when the player jumps.
+- Background Ambiance: Added quiet room ambiance to immerse the player in the house environment.
+- Enhanced Score Tracker UI: The score tracker UI element has been greatly improved to have better visibility, style, and reactivity to player actions.
+- Additional Sound Enhancements: Made some sounds 3D to make them less disturbing and more immersive for the player. e.g., the dog walking and barking sounds.
+- Placed More Objective Items: The gameplay has been extended by adding more breakable items for the player to cause chaos with.
 
 # Assignment 6
 **Design and Rationale:** In our game "Cat Chaos", the cat (player) must avoid being caught while causing chaos in the house.

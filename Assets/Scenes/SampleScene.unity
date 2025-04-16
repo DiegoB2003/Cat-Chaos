@@ -13119,6 +13119,7 @@ MonoBehaviour:
   - {fileID: 1534354549}
   player: {fileID: 1865192513972409024}
   triggerDistance: 8
+  barkNoise: 25
   dogBarkSound: {fileID: 8300000, guid: 76a741afa5547964caa2e88a702e17cb, type: 3}
   dogWalkSound: {fileID: 8300000, guid: eebc38f6714b69540a719ba5b40b8d03, type: 3}
 --- !u!195 &1068215146
@@ -27517,6 +27518,10 @@ PrefabInstance:
       value: PlayerCat
       objectReference: {fileID: 0}
     - target: {fileID: 7102346854829224782, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
+      propertyPath: force
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102346854829224782, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       propertyPath: ownerAI
       value: 
       objectReference: {fileID: 157232742}
@@ -27524,6 +27529,10 @@ PrefabInstance:
       propertyPath: jumpClip
       value: 
       objectReference: {fileID: 8300000, guid: f7f67276151c3454e8466e8b5b681327, type: 3}
+    - target: {fileID: 7102346854829224782, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
+      propertyPath: footstepNoise
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7102346854829224782, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       propertyPath: interactRange
       value: 0.5

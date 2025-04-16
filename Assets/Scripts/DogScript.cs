@@ -9,6 +9,8 @@ public class DogScript : MonoBehaviour
     public Transform player;
     public float triggerDistance = 8f;
 
+    public float barkNoise = 25f;
+
     private NavMeshAgent agent;
     private Animator animator;
     private Transform currentWaypoint;
@@ -57,7 +59,7 @@ public class DogScript : MonoBehaviour
         audioSource.clip = dogBarkSound;
         audioSource.loop = false;
         audioSource.Play();
-        NoiseManager.Instance.AddNoise(15f);
+        NoiseManager.Instance.AddNoise(barkNoise);
 
         yield return new WaitForSeconds(1f); //Bark duration
 

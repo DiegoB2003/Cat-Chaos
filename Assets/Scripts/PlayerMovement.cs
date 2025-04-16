@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource footstepAudioSource; // Should have loop = true
     public AudioSource jumpAudioSource;     // Should have loop = false
     public AudioClip jumpClip;
+    public float footstepNoise = 0.1f;
 
     public TMP_Text interactPrompt; //Press E text object
     public float interactRange = 0.5f;
@@ -79,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
                 footstepAudioSource.Play();
             } 
             Debug.Log("Adding footstep noise.");
-            NoiseManager.Instance.AddNoise(.15f);
+            NoiseManager.Instance.AddNoise(footstepNoise * Time.deltaTime);
         }
         else
         {

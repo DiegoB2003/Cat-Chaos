@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HomeownerAIScript : MonoBehaviour
 {   
@@ -75,7 +76,7 @@ public class HomeownerAIScript : MonoBehaviour
         }
         else if (!playerInSightRange && !playerInAttackRange && !triggeredChase)
         {   
-            IdleBeforeNextWalk();
+            StartCoroutine(IdleBeforeNextWalk());
             EndChaseMusic();
         }
     }
@@ -131,7 +132,7 @@ public class HomeownerAIScript : MonoBehaviour
     private void ChasePlayer()
     {
         TriggerChaseMusic();
-        agent.speed = 5f; // or whatever faster speed you want for chasing
+        agent.speed = 4.5f; // or whatever faster speed you want for chasing
         agent.SetDestination(player.position);
         anim.SetBool("isRunning", true);
         anim.SetBool("isWalking", false);
@@ -165,6 +166,8 @@ public class HomeownerAIScript : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("GameOver");
     }
 
     private IEnumerator StopChasingAfterTime(float time)

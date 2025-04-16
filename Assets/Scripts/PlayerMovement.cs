@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text interactPrompt; //Press E text object
     public float interactRange = 0.5f;
 
+    private bool isMoving;
+
     // private bool wasMovingLastFrame = false;
 
     void Start()
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 moveDirection = Vector3.zero;
 
-        bool isMoving = false;
+        isMoving = false;
         if (Input.GetKey(KeyCode.W)) { moveDirection += transform.forward; isMoving = true; }
         if (Input.GetKey(KeyCode.S)) { moveDirection -= transform.forward; isMoving = true; }
         if (Input.GetKey(KeyCode.D)) { moveDirection += transform.right; isMoving = true; }
@@ -73,9 +75,11 @@ public class PlayerMovement : MonoBehaviour
         // Play/stop walking sound
         if (isMoving && isGrounded)
         {
-            if (!footstepAudioSource.isPlaying)
+            if (!footstepAudioSource.isPlaying) {
                 footstepAudioSource.Play();
-                NoiseManager.Instance.AddNoise(.065f); 
+            } 
+            Debug.Log("Adding footstep noise.");
+            NoiseManager.Instance.AddNoise(.15f);
         }
         else
         {

@@ -45,7 +45,7 @@ public class PowerUpScript : MonoBehaviour
             if (player != null)
             {
                 //Start the boost on the player script
-                if (powerUpType == PowerUpType.Speed)
+                if (powerUpType == PowerUpType.Speed && !speedIcon.enabled)
                 {
                     //Instantiate sparkle effect at the power-up position
                     GameObject sparkle = Instantiate(sparkleEffectPrefab, transform.position, Quaternion.identity);
@@ -56,7 +56,7 @@ public class PowerUpScript : MonoBehaviour
 
                     player.StartCoroutine(ApplySpeedBoost(player));
                 }
-                else if (powerUpType == PowerUpType.Jump)
+                else if (powerUpType == PowerUpType.Jump && !jumpIcon.enabled)
                 {
                     //Instantiate sparkle effect at the power-up position
                     GameObject sparkle = Instantiate(sparkleEffectPrefab, transform.position, Quaternion.identity);

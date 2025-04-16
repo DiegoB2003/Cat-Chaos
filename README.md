@@ -12,7 +12,8 @@ Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 ### Nick Filipov:
 - Dog Sounds: Added barking sounds for when the player walks to close to Dog because the dog is supposed to make a noise to
 increase the noise meter. Also added walking sounds for the Dog as it walks to its next location.
-- Background Music: Added background music throughout the game so it isn't silent.
+- Background Music: Added background music throughout the game so it isn't silent and feels a little sneaky while you
+sneak around as a cat and try to avoid the owner.
 - PowerUp Sounds: Added a sound for each of the 2 PowerUps to indicate to the player that they picked up the powerup and
 what powerup they picked up depending on the sound.
 - PowerUp Effect: I also created a sparkle animation to when the user picks up a PowerUp just for visual feedback.

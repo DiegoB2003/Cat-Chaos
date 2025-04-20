@@ -599,6 +599,22 @@ PrefabInstance:
       propertyPath: speedPickupSound
       value: 
       objectReference: {fileID: 8300000, guid: 4d8eef02a978564489c67d015eeebed6, type: 3}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7556685344115256682, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Name
       value: JumpCube (1)
@@ -4474,6 +4490,22 @@ PrefabInstance:
       propertyPath: speedPickupSound
       value: 
       objectReference: {fileID: 8300000, guid: 4d8eef02a978564489c67d015eeebed6, type: 3}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7556685344115256682, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Name
       value: JumpCube (2)
@@ -4817,7 +4849,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64748251632413182, guid: d5fdd893efe98eb4e9e37cf920d12da0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8769,6 +8802,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8828836291693243368, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: jumpIcon
       value: 
@@ -10593,6 +10642,22 @@ PrefabInstance:
     - target: {fileID: 4640582899057429791, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8828836291693243368, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: jumpIcon
@@ -14640,6 +14705,22 @@ PrefabInstance:
       propertyPath: speedPickupSound
       value: 
       objectReference: {fileID: 8300000, guid: 4d8eef02a978564489c67d015eeebed6, type: 3}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7556685344115256682, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Name
       value: JumpCube
@@ -16231,6 +16312,22 @@ PrefabInstance:
     - target: {fileID: 4640582899057429791, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: m_TagString
       value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8828836291693243368, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: jumpIcon
@@ -19960,7 +20057,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64813735620354020, guid: 7010435c7440e3b43add238e9b670d5b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20420,15 +20518,19 @@ PrefabInstance:
       objectReference: {fileID: 602176192439476717, guid: 3287adc5b883e1c4888a2b5d0d39a862, type: 3}
     - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Size.x
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Size.y
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Size.z
-      value: 2.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7556685344115256682, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Name
@@ -22603,7 +22705,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64623906660251858, guid: 2fd3ee0389fc8cb4c9f6314bd779afb3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27199,6 +27302,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8828836291693243368, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: jumpIcon
       value: 
@@ -27744,6 +27863,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &1865192513972409037
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698330016}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1001 &2924120015477969640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27830,15 +27970,19 @@ PrefabInstance:
       objectReference: {fileID: 602176192439476717, guid: 3287adc5b883e1c4888a2b5d0d39a862, type: 3}
     - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Size.x
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Size.y
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Size.z
-      value: 2.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6889491230831610927, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7556685344115256682, guid: 779bc3f17aac07046a7aa5d04f26f954, type: 3}
       propertyPath: m_Name
@@ -27937,6 +28081,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 265890741477094360, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 642740212725135234, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -28033,7 +28181,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 1166196220}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2758384627619994562, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -28043,6 +28192,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4425780676160737132, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1865192513972409031}
+    - targetCorrespondingSourceObject: {fileID: 4425780676160737132, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1865192513972409037}
     - targetCorrespondingSourceObject: {fileID: 661918318046097398, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3609430229333591262}
@@ -28195,15 +28347,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: m_Size.x
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: m_Size.y
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: m_Size.z
-      value: 2.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8433564189826856596, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
+      propertyPath: m_Center.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8828836291693243368, guid: b60f831254066fb47a7b9c62706dce93, type: 3}
       propertyPath: jumpIcon

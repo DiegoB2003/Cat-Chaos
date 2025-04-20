@@ -61,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) { moveDirection += transform.right; isMoving = true; }
         if (Input.GetKey(KeyCode.A)) { moveDirection -= transform.right; isMoving = true; }
 
+        if (moveDirection != Vector3.zero)
+        {
+            moveDirection = moveDirection.normalized; //Normalize to prevent faster diagonal movement
+        }
+
         anim.SetBool("isMoving", isMoving);
 
         // Move player

@@ -76,7 +76,7 @@ public class HomeownerAIScript : MonoBehaviour
         }
         else if (!playerInSightRange && !playerInAttackRange && !triggeredChase)
         {   
-            StartCoroutine(IdleBeforeNextWalk());
+            Patrol();
             EndChaseMusic();
         }
     }
@@ -132,10 +132,20 @@ public class HomeownerAIScript : MonoBehaviour
     private void ChasePlayer()
     {
         TriggerChaseMusic();
-        agent.speed = 4.5f; // or whatever faster speed you want for chasing
-        agent.SetDestination(player.position);
-        anim.SetBool("isRunning", true);
-        anim.SetBool("isWalking", false);
+        agent.speed = 4.5f; // Chase speed
+
+        NavMeshPath path = new NavMeshPath();
+        if (NavMesh.CalculatePath(agent.transform.position, player.position, NavMesh.AllAreas, path) && path.status == NavMeshPathStatus.PathComplete)
+        {
+            //Only set the destination if a complete path is found
+            agent.SetDestination(player.position);
+            anim.SetBool("isRunning", true);
+            anim.SetBool("isWalking", false);
+        }
+        else
+        {
+            Patrol(); //If no path is found patrol instead
+        }
     }
 
     private void AttackPlayer()

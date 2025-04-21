@@ -127,3 +127,5 @@ MonoBehaviour:
   sparkleEffectPrefab: {fileID: 602176192439476717, guid: 3287adc5b883e1c4888a2b5d0d39a862, type: 3}
   speedIcon: {fileID: 0}
   jumpIcon: {fileID: 0}
+  speedPickupSound: {fileID: 0}
+  jumpPickupSound: {fileID: 0}

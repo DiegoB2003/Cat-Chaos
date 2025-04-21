@@ -672,7 +672,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e3608b60630302a4e92e2997e2037f27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1014,6 +1014,12 @@ MonoBehaviour:
   force: 250
   turn: {x: 0, y: 0}
   ownerAI: {fileID: 0}
+  footstepAudioSource: {fileID: 0}
+  jumpAudioSource: {fileID: 0}
+  jumpClip: {fileID: 0}
+  footstepNoise: 0.1
+  interactPrompt: {fileID: 0}
+  interactRange: 0.5
 --- !u!1 &4550032349928600975
 GameObject:
   m_ObjectHideFlags: 0

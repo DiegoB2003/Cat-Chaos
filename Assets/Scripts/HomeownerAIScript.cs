@@ -167,7 +167,7 @@ public class HomeownerAIScript : MonoBehaviour
             audioSource.Play();
 
             // anim.SetBool("isAttacking", true);
-
+            PlayerPrefs.DeleteKey("HasSeenCredits");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -177,7 +177,17 @@ public class HomeownerAIScript : MonoBehaviour
     {
         alreadyAttacked = false;
         Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("GameOver");
+
+        if (PlayerPrefs.GetInt("HasSeenCredits", 0) == 0)
+        {
+            PlayerPrefs.SetInt("HasSeenCredits", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("Credits");
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     private IEnumerator StopChasingAfterTime(float time)

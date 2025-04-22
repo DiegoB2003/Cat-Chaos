@@ -5,6 +5,20 @@ CS 426 Final Project
 
 Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 
+# Assignment 8
+### Arlette Diaz:
+-
+
+### Nick Filipov:
+-
+
+### Diego Bravo:
+- Adjusted the breaking sound volume so it isn’t too loud.
+- Adjusted music volume to be a little louder on speakers.
+- Added more jump power-ups to allow players to reach new areas.
+- Added more breakable cups to allow players the opportunity to get higher scores and encourage them to explore new areas.
+- Added toon style shader (aka Cel Shading), which has been applied to some power-up objects to make them pop out a bit more. This shader may be further utilized in the next release when we redesign power-ups.
+
 # Assignment 7
 ### Arlette Diaz:
 - Attack Sound: Added a woosh audio that plays whenever the owner grabs the player.

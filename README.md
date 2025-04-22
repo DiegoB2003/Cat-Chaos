@@ -10,7 +10,13 @@ Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 -
 
 ### Nick Filipov:
--
+- Made the Owner patrol when the player is in an unreachable area so it doesn’t just run in place.
+- Normalized running so when running diagonally the player doesn’t run faster
+- Increased range of powerup pick up so that it matches the “Press E” radius
+- Added a sphere collider on the cat so it can’t pass through walls or other obstacles anymore especially with speed boost
+- Added an outline shader which outlines any object that it is assigned to, this shader was added to power-up objects to make them stand out a
+little more to the user with different color outlines, as well as added to all breakable objects with a white outline to bring the users
+attention to what is breakable and make it more noticeable because of the dark atmosphere.
 
 ### Diego Bravo:
 - Adjusted the breaking sound volume so it isn’t too loud.

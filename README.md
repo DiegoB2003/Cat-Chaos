@@ -7,7 +7,11 @@ Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 
 # Assignment 8
 ### Arlette Diaz:
--
+- Added a credits scene with a simple scroll animation.
+- Added a start menu scene with the game title, music, and 3 functional buttons
+- Added an “About” page with game instructions and a bit of background on the game.
+- Added a reflective shader, which has been applied to the few mirrors around the house. This allows “reflections” to be seen if the user is in front of the mirror object. This shader will be further utilized and updated in the next release as we add more details to the level.
+
 
 ### Nick Filipov:
 - Made the Owner patrol when the player is in an unreachable area so it doesn’t just run in place.

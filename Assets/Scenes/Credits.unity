@@ -469,7 +469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: -418}
+  m_AnchoredPosition: {x: -221, y: -685}
   m_SizeDelta: {x: 344.9968, y: 231.9126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709909532
@@ -576,7 +576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -424, y: -49}
+  m_AnchoredPosition: {x: -241, y: -251}
   m_SizeDelta: {x: 344.9968, y: 231.9126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081449040
@@ -682,13 +682,45 @@ MonoBehaviour:
 
 
 
-    Assets by
+    Unity Store Assets
 
 
 
 
-    Audio From
 
+
+
+
+
+
+
+    Sounds
+    (free from Pixabay.com):
+
+
+
+
+
+
+
+
+
+
+
+
+    Music
+
+
+
+
+
+
+
+
+
+
+
+    Tutorials Used
 
 
 
@@ -764,7 +796,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -353.18436, y: -24.611084, z: 219.34924, w: -973.24866}
+  m_margin: {x: -630.3912, y: -24.611084, z: 219.34924, w: -2560.5469}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -966,7 +998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 433, y: 170}
+  m_AnchoredPosition: {x: 424, y: 170}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1631063933
@@ -989,11 +1021,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Arlette Diaz\n\nDiego Bravo\nNick Filipov\nArlette Diaz\n\nJustCreate
-    - Low Poly Cartoon House Interiors \nawtdev - Create A Cat\n\nAll royalty-free
-    sound effects from Pixabay - https://pixabay.com/\n\r\"Divertissement - Pizzicato
-    (from the ballet Sylvia)\" Kevin MacLeod (incompetech.com)\r\nLicensed under
-    Creative Commons: By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\nJiji
+  m_text: "Arlette Diaz\n\nDiego Bravo\nNick Filipov\nArlette Diaz\n\n\"Free Pixel
+    Font - Thaleah\" by Tiny Worlds\r\n\"Animals FREE - Animated Low Poly 3D Models\"
+    by ithappy\r\n\"PBC - Plates, Bowls and Cups\" by Kharnyx\r\n\"Create a Cat -
+    Cat Generator\" by awtdev\r\n\"Low Poly Cartoon House Interiors\" by JustCreate\r\n\"Creative
+    Characters FREE - Animated Low Poly 3D Models\" by ithappy\r\n\nCat Walk \"RUNNING
+    1\" by vmgraw\r\nCat Jump \"Cartoon jump\" by Bastianhallo\r\nCeramic Breaking
+    \"Plate Break 1\" by jc.sg\r\n\"Quiet room tone captured from a small sized kitchen\"
+    by jmbphilmes\r\n\"Big dog barking\" by AudioPapkin\r\n\"Dog_Walk2\" by freesound_community\r\n\"Pick-Up
+    SFX\" by freesound_community\r\n\"power_up_grab\" by freesound_community\n\"Swoosh
+    Sound Effect\" by DheerajakaM4JOR\n\n\"Divertissement - Pizzicato (from the ballet
+    Sylvia)\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
+    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\nfree
+    from Pixabay.com:\r\n\"My Cat is Crazy\" by geoffharvey\r\n\"Market Chase\" by
+    AyItsMatt \r\n\nhttps://www.youtube.com/watch?v=wvGvu-GMNyg&ab_channel=Dodgendfire\r\nhttps://www.youtube.com/watch?v=UjkSFoLxesw&ab_channel=Dave%2FGameDevelopment\r\nhttps://www.youtube.com/watch?v=d89qqVGUHtA&list=WL&index=29&ab_channel=AAvirusAA\n\nJiji
     & Jade (Arlette's cats)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1059,7 +1100,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -353.18436, y: -24.611084, z: -103.33038, w: -988.8523}
+  m_margin: {x: -353.18436, y: -24.611084, z: -141.58173, w: -2291.667}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1184,7 +1225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.164, y: -917}
+  m_AnchoredPosition: {x: 13.164, y: -2135}
   m_SizeDelta: {x: 529.33, y: 471.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768866445

@@ -71,10 +71,25 @@ public class PowerUpScript : MonoBehaviour
                     player.StartCoroutine(ApplyJumpBoost(player));
                 }
             }
-            //Destroy this object so it can't be used again
-            Destroy(gameObject);
+            StartCoroutine(RespawnPowerUp());
         }
     }
+
+    private IEnumerator RespawnPowerUp()
+    {
+        // Disable renderer and collider, not the whole object
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        
+        // Wait
+        yield return new WaitForSeconds(30f);
+
+        // Re-enable renderer and collider
+        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<Collider>().enabled = true;
+        activated = false;
+    }
+
 
     private IEnumerator ApplySpeedBoost(PlayerMovement player)
     {   

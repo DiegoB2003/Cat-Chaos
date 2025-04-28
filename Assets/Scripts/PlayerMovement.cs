@@ -8,17 +8,16 @@ using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {   
+    private bool isMoving = false;
+    private bool isGrounded = false;
+    private Rigidbody rb;
+    private Transform t;
+    private Vector2 turn;
+
     [Header("Movement")]
     public float speed = 5.0f;
     public float rotationSpeed = 90;
     public float force = 250f;
-    // public static float noiseLevel;
-
-    private Rigidbody rb;
-    private Transform t;
-    private bool isGrounded = false;
-
-    private Vector2 turn;
 
     private Animator anim;
     
@@ -29,14 +28,13 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource footstepAudioSource; // Should have loop = true
     public AudioSource jumpAudioSource;     // Should have loop = false
     public AudioClip jumpClip;
+
+    [Header("Noise")]
     public float footstepNoise = 0.1f;
 
+    [Header("Interact")]
     public TMP_Text interactPrompt; //Press E text object
     public float interactRange = 0.5f;
-
-    private bool isMoving;
-
-    // private bool wasMovingLastFrame = false;
 
     void Start()
     {

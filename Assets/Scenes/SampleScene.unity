@@ -32936,14 +32936,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Cup
       objectReference: {fileID: 0}
-    - target: {fileID: 7933407952960785753, guid: 42e3bfc2b5ab7554998586d8096d9904, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7933407952960785753, guid: 42e3bfc2b5ab7554998586d8096d9904, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 5e2007a0e9e6d7b46ba1a749b8bf2ae0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33063,7 +33055,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f7f67276151c3454e8466e8b5b681327, type: 3}
     - target: {fileID: 7102346854829224782, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       propertyPath: footstepNoise
-      value: 8
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7102346854829224782, guid: 8a77ac64cad593c4189e6cf8d4159ec1, type: 3}
       propertyPath: interactRange

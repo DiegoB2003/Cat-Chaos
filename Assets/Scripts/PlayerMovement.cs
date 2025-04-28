@@ -8,19 +8,22 @@ using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {   
+    [Header("Movement")]
     public float speed = 5.0f;
     public float rotationSpeed = 90;
     public float force = 250f;
-    public static float noiseLevel;
+    // public static float noiseLevel;
 
     private Rigidbody rb;
     private Transform t;
     private bool isGrounded = false;
 
-    public Vector2 turn;
+    private Vector2 turn;
 
     private Animator anim;
-    public HomeownerAIScript ownerAI;
+    
+    [Header("Owner")]
+    [SerializeField] private HomeownerAIScript ownerAI;
 
     [Header("Audio")]
     public AudioSource footstepAudioSource; // Should have loop = true

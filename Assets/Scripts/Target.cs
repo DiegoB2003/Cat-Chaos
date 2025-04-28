@@ -8,6 +8,8 @@ public class Target : MonoBehaviour
     public Score scoreManager;
     public float destructionForceThreshold = 100f;
 
+    public float breakNoise = 30f;
+
     [SerializeField] private AudioSource breakSound;
  
     //this method is called whenever a collision is detected
@@ -36,7 +38,7 @@ public class Target : MonoBehaviour
         Debug.Log($"{gameObject.name} was destroyed due to high impact! Point added.");
         scoreManager.AddScoreGain();
         breakSound.Play();
-        NoiseManager.Instance.AddNoise(25f);
+        NoiseManager.Instance.AddNoise(breakNoise);
         Destroy(gameObject); // Could also spawn particles, sounds, etc.
     }
 }

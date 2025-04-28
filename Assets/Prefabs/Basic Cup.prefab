@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6249084218469045406}
   - component: {fileID: 4830529817186439300}
   - component: {fileID: 7097888413375922472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Basic Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,6 +68,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 9e6607874d33a05469b7a85fc189deb2, type: 2}
+  - {fileID: 2100000, guid: 5e2007a0e9e6d7b46ba1a749b8bf2ae0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
   destructionForceThreshold: 100
+  breakNoise: 30
   breakSound: {fileID: 0}
 --- !u!65 &4830529817186439300
 BoxCollider:

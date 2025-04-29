@@ -36,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text interactPrompt; //Press E text object
     public float interactRange = 0.5f;
 
+    Camera mainCamera;
+    Camera FPCamera;
+    bool isFirstPerson = false;
+
     void Start()
     {
         interactionVisibility(0f);
@@ -50,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
         {
             footstepAudioSource.loop = true;
         }
+        mainCamera = Camera.main;
+        FPCamera = GameObject.FindGameObjectWithTag("FPCamera").GetComponent<Camera>();
+        FPCamera.gameObject.SetActive(false); //Disable first person camera at start
     }
 
     void Update()
@@ -77,7 +84,32 @@ public class PlayerMovement : MonoBehaviour
         turn.y += Input.GetAxis("Mouse Y");
         turn.y = Mathf.Clamp(turn.y, -90, 90);
         transform.localRotation = Quaternion.Euler(0, turn.x, 0);
-        Camera.main.transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
+        
+        if (isFirstPerson)
+        {
+            FPCamera.transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
+        }
+        else
+        {
+            mainCamera.transform.localRotation = Quaternion.Euler(-turn.y, 0, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Debug.Log("Toggled first person camera.");
+            if (isFirstPerson)
+            {
+                isFirstPerson = false;
+                mainCamera.gameObject.SetActive(true);
+                FPCamera.gameObject.SetActive(false);
+            }
+            else
+            {
+                isFirstPerson = true;
+                mainCamera.gameObject.SetActive(false);
+                FPCamera.gameObject.SetActive(true);
+            }
+        }
 
         // Play/stop walking sound
         if (isMoving && isGrounded)
@@ -110,15 +142,38 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Triggered pathfinding chase.");
-            ownerAI.TriggerPersistentChase(10);
+            ownerAI.TriggerPersistentChase(12);
         }
 
-        checkInteractable();
+        if (isFirstPerson)
+        {
+            checkInteractableFP();
+        }
+        else
+        {
+            checkInteractableTP();
+        }
     }
 
-    private void checkInteractable()
+    private void checkInteractableFP()
     {
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        Ray ray = new Ray(FPCamera.transform.position, FPCamera.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, interactRange)) {
+            if (hit.collider.CompareTag("Interactable")) {
+                interactionVisibility(1f); //Show prompt
+            } else {
+                interactionVisibility(0f); //Hide prompt
+            }
+        } else {
+            interactionVisibility(0f); //Hide prompt
+        }
+    }
+
+    private void checkInteractableTP()
+    {
+        Ray ray = new Ray(mainCamera.transform.position, mainCamera.transform.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, interactRange)) {

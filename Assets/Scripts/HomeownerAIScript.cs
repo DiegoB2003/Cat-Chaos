@@ -66,7 +66,7 @@ public class HomeownerAIScript : MonoBehaviour
         else if (!playerInSightRange && !playerInAttackRange && noisePercentage >= noiseTriggerThreshold)
         {
             //Trigger chase if the noise level is above the threshold
-            TriggerPersistentChase(8f); //Chase for 8 seconds
+            TriggerPersistentChase(12f); //Chase for 12 seconds
             ChasePlayer();
         }
         else if (!playerInSightRange && !playerInAttackRange && noisePercentage >= noiseTriggerPatrolThreshold)

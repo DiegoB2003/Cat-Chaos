@@ -5,6 +5,15 @@ CS 426 Final Project
 
 Team Members: Arlette Diaz, Nick Filipov, Diego Bravo
 
+# How To Play + Controls
+- You must be a mischievous cat by destroying fragile objects (currently only ceramic objects like cups) around the house without getting caught by the owner.
+- Many actions, such as breaking items, moving, and getting near the dog, will contribute to a noise meter, triggering the owner to chase you if you are too loud.
+- Use **WASD** for forward, right, back, and left movement.
+- Press **Space** to jump.
+- Use the **Mouse** to look around.
+- **Left Mouse Click** (recently implemented for public demo) will push objects in front of you.
+- Press **E** to interact with power-ups around the level.
+
 # Assignment 8
 ### Arlette Diaz:
 - Added a credits scene with a simple scroll animation.

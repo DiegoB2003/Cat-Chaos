@@ -281,10 +281,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 230217074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f109a9a73dc3f24ea464d0db13afaf8, type: 3}
+  m_Script: {fileID: 11500000, guid: 462c01386a7689c4ba521f6461742a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bgmClip: {fileID: 8300000, guid: 46539112513609d4a9a1795453dd03f9, type: 3}
+  volume: 0.05
 --- !u!1 &237614665
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +754,9 @@ MonoBehaviour:
 
 
 
+
+
+
     Music
 
 
@@ -1075,9 +1079,10 @@ MonoBehaviour:
     \"Plate Break 1\" by jc.sg\r\n\"Quiet room tone captured from a small sized kitchen\"
     by jmbphilmes\r\n\"Big dog barking\" by AudioPapkin\r\n\"Dog_Walk2\" by freesound_community\r\n\"Pick-Up
     SFX\" by freesound_community\r\n\"power_up_grab\" by freesound_community\n\"Swoosh
-    Sound Effect\" by DheerajakaM4JOR\n\n\"Divertissement - Pizzicato (from the ballet
-    Sylvia)\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
-    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\nfree
+    Sound Effect\" by DheerajakaM4JOR\n\"Comedy Funny Cartoon Background Music\"
+    by lkoliks\n\"Warning Sound\" by freesound_community\n\n\"Divertissement - Pizzicato
+    (from the ballet Sylvia)\" Kevin MacLeod (incompetech.com)\r\nLicensed under
+    Creative Commons: By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\nfree
     from Pixabay.com:\r\n\"My Cat is Crazy\" by geoffharvey\r\n\"Market Chase\" by
     AyItsMatt \r\n\nhttps://www.youtube.com/watch?v=wvGvu-GMNyg&ab_channel=Dodgendfire\r\nhttps://www.youtube.com/watch?v=UjkSFoLxesw&ab_channel=Dave%2FGameDevelopment\r\nhttps://www.youtube.com/watch?v=d89qqVGUHtA&list=WL&index=29&ab_channel=AAvirusAA\n\nJiji
     & Jade (Arlette's cats)"
@@ -1270,7 +1275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13.164, y: -2135}
+  m_AnchoredPosition: {x: 13.164, y: -2244}
   m_SizeDelta: {x: 529.33, y: 471.1238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768866445

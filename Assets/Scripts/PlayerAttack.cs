@@ -13,8 +13,12 @@ public class PlayerAttack : MonoBehaviour
 
     private float lastAttackTime = -Mathf.Infinity; // So player can attack immediately
 
+    [Header("Layer")]
     [SerializeField] private LayerMask pushableLayers; // Layers that the attack affects. 
     // (We'll just use the breakable objects layer since that's the only thing that should be affected!)
+
+    [Header("Layer")]
+    [SerializeField] private AudioSource attackSound;
 
     void Update()
     {
@@ -27,6 +31,8 @@ public class PlayerAttack : MonoBehaviour
     void Attack()
     {
         lastAttackTime = Time.time; // Reset cooldown timer
+
+        attackSound.Play();
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackRange, pushableLayers);
 

@@ -12754,6 +12754,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3062625336326507482, guid: 2f38e447504660e47b70fcd2907fd3df, type: 3}
   m_PrefabInstance: {fileID: 1271991293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1272602670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1272602672}
+  - component: {fileID: 1272602671}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1272602671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272602670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f109a9a73dc3f24ea464d0db13afaf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: 1c4385c9e80098d49ab4e90be1d5000a, type: 3}
+--- !u!4 &1272602672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272602670}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 511.8221, y: -3.9708862, z: 660.73895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1278457086 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4830009469427577755, guid: ff9e207164fca5248a9835631385ee48, type: 3}
@@ -19061,7 +19106,6 @@ GameObject:
   - component: {fileID: 1953298651}
   - component: {fileID: 1953298650}
   - component: {fileID: 1953298654}
-  - component: {fileID: 1953298655}
   m_Layer: 5
   m_Name: Main menu
   m_TagString: Untagged
@@ -19167,23 +19211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de984996e727bd342b150f54166b26b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1953298655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953298649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 428ce2ca0a658934280d8b8ef8e0ba6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgmClip: {fileID: 8300000, guid: 1c4385c9e80098d49ab4e90be1d5000a, type: 3}
-  eventMusicClip: {fileID: 0}
-  bgmDelay: 0
-  fadeDuration: 1
-  volume: 1
 --- !u!1 &1954833972
 GameObject:
   m_ObjectHideFlags: 0
@@ -21299,3 +21326,4 @@ SceneRoots:
   - {fileID: 1042294813}
   - {fileID: 407700090}
   - {fileID: 181736683}
+  - {fileID: 1272602672}

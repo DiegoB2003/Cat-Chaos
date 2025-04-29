@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -17,6 +18,8 @@ public class SceneAudioManager : MonoBehaviour
     private AudioSource audioSource;
     private Coroutine bgmLoopCoroutine;
     private Coroutine fadeCoroutine;
+
+    public static object Instance { get; internal set; }
 
     void Start()
     {
@@ -98,5 +101,10 @@ public class SceneAudioManager : MonoBehaviour
             yield return new WaitForSeconds(newClip.length + delayAfterClip);
             PlayBackgroundMusic();
         }
+    }
+
+    public static implicit operator SceneAudioManager(MenuAudioManager v)
+    {
+        throw new NotImplementedException();
     }
 }

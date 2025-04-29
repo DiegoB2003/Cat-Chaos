@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class NoiseMeterUI : MonoBehaviour
@@ -15,9 +16,17 @@ public class NoiseMeterUI : MonoBehaviour
     public AudioClip warningSound;
 
     [Header("Audio")]
-    [SerializeField] private AudioSource warningAudioSource; // assign in Inspector
+    private AudioSource warningAudioSource;
     private bool isFlashing = false;
     private bool hasPlayedWarning = false;
+
+    void Start()
+    {
+        warningAudioSource = gameObject.AddComponent<AudioSource>();
+        warningAudioSource.spatialBlend = 0f;
+        warningAudioSource.loop = false;
+        warningAudioSource.playOnAwake = false;
+    }
 
     private void Update()
     {

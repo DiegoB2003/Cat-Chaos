@@ -1498,6 +1498,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 983810971}
     m_Modifications:
     - target: {fileID: 8403270726297194240, guid: f2be5bb485ea87e49ae4d8d09aef1023, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8403270726297194240, guid: f2be5bb485ea87e49ae4d8d09aef1023, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.99
       objectReference: {fileID: 0}
@@ -1507,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8403270726297194240, guid: f2be5bb485ea87e49ae4d8d09aef1023, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 81.6
+      value: 81.45
       objectReference: {fileID: 0}
     - target: {fileID: 8403270726297194240, guid: f2be5bb485ea87e49ae4d8d09aef1023, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22961,6 +22965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4258445915251160258, guid: 06d98bc93ae0c8543b58cc14e7161a43, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4258445915251386594, guid: 06d98bc93ae0c8543b58cc14e7161a43, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -23025,7 +23033,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 5e2007a0e9e6d7b46ba1a749b8bf2ae0, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6718600221780226177, guid: 06d98bc93ae0c8543b58cc14e7161a43, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -24112,6 +24121,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhotoFrame (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5833242065726298115, guid: 5566f40006009174baf91ddd4a5289b8, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5833242065726391331, guid: 5566f40006009174baf91ddd4a5289b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -24168,7 +24181,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64790305197031662, guid: 5566f40006009174baf91ddd4a5289b8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -25082,6 +25096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate_02
       objectReference: {fileID: 0}
+    - target: {fileID: 5650919187796748552, guid: 8cedbe2c35e093945b3b9dae8f5638ea, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5650919187797243176, guid: 8cedbe2c35e093945b3b9dae8f5638ea, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -25146,7 +25164,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 5e2007a0e9e6d7b46ba1a749b8bf2ae0, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4460981746656346307, guid: 8cedbe2c35e093945b3b9dae8f5638ea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -30744,6 +30763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flower_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4258445915251160258, guid: 06d98bc93ae0c8543b58cc14e7161a43, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4258445915251386594, guid: 06d98bc93ae0c8543b58cc14e7161a43, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -30808,7 +30831,8 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 5e2007a0e9e6d7b46ba1a749b8bf2ae0, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6718600221780226177, guid: 06d98bc93ae0c8543b58cc14e7161a43, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -38807,6 +38831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhotoFrame (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5833242065726298115, guid: 5566f40006009174baf91ddd4a5289b8, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5833242065726391331, guid: 5566f40006009174baf91ddd4a5289b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -38863,7 +38891,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64790305197031662, guid: 5566f40006009174baf91ddd4a5289b8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

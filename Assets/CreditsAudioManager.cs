@@ -1,12 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class MenuAudioManager : MonoBehaviour
+public class CreditsAudioManager : MonoBehaviour
 {
-    public static MenuAudioManager Instance;
-
+    public static CreditsAudioManager Instance;
     [Header("Clips")]
     public AudioClip bgmClip;
+
+    [Header("Volume")]
+    public float volume = .2f;
 
     [Header("Audio")]
     private AudioSource audioSource;
@@ -20,11 +22,11 @@ public class MenuAudioManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(this.gameObject); 
-
+        DontDestroyOnLoad(this.gameObject);
         audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.volume = volume;
         audioSource.clip = bgmClip;
-        audioSource.Play();         
+        audioSource.Play();
     }
     public IEnumerator FadeOutAndDestroy(float duration = 1f)
     {

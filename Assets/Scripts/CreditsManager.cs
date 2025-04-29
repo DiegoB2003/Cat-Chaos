@@ -3,8 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class CreditsManager : MonoBehaviour
 {
-    public void LoadGameOverScene()
+    public void LoadStartMenuScene()
     {
-        SceneManager.LoadScene("GameOver");
+        CreditsAudioManager.Instance.StartCoroutine(CreditsAudioManager.Instance.FadeOutAndDestroy());
+        SceneManager.LoadScene("StartMenu");
     }
 }

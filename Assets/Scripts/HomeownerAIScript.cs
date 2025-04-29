@@ -177,17 +177,7 @@ public class HomeownerAIScript : MonoBehaviour
     {
         alreadyAttacked = false;
         Cursor.lockState = CursorLockMode.None;
-
-        if (PlayerPrefs.GetInt("HasSeenCredits", 0) == 0)
-        {
-            PlayerPrefs.SetInt("HasSeenCredits", 1);
-            PlayerPrefs.Save();
-            SceneManager.LoadScene("Credits");
-        }
-        else
-        {
-            SceneManager.LoadScene("GameOver");
-        }
+        SceneManager.LoadScene("GameOver");
     }
 
     private IEnumerator StopChasingAfterTime(float time)

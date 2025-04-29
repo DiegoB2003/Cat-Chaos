@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class NoiseMeterUI : MonoBehaviour
@@ -9,7 +10,14 @@ public class NoiseMeterUI : MonoBehaviour
     [Header("Flashing Settings")]
     [SerializeField] private float dangerThreshold = 0.7f;
     [SerializeField] private float flashSpeed = 2f;
+
+    [Header("Clip")]
+    public AudioClip warningSound;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource warningAudioSource; // assign in Inspector
     private bool isFlashing = false;
+    private bool hasPlayedWarning = false;
 
     private void Update()
     {
@@ -19,15 +27,24 @@ public class NoiseMeterUI : MonoBehaviour
         float noisePercentage = currentNoiseLevel / maxNoise;
         noiseSlider.value = noisePercentage * 100f;
 
-        // Start/Stop flashing based on threshold
+        // Handle danger zone
         if (noisePercentage >= dangerThreshold)
         {
             isFlashing = true;
+
+            // Play warning sound only once
+            if (!hasPlayedWarning)
+            {
+                warningAudioSource.clip = warningSound;
+                warningAudioSource.Play();
+                hasPlayedWarning = true;
+            }
         }
         else
         {
             isFlashing = false;
-            fillImage.color = Color.Lerp(Color.green, Color.red, noisePercentage); // reset to static color
+            hasPlayedWarning = false; // Reset when dropping below threshold
+            fillImage.color = Color.Lerp(Color.green, Color.red, noisePercentage);
         }
 
         // Flashing effect

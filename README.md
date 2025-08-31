@@ -15,16 +15,13 @@ Team Members: Arlette Diaz, Nick Filipov, **Diego Bravo**
 - Press **E** to interact with power-ups around the level.
 
 ### My contributions:
-- Adjusted the breaking sound volume so it isn’t too loud.
-- Adjusted music volume to be a little louder on speakers.
-- Added more jump power-ups to allow players to reach new areas.
-- Added more breakable cups to allow players the opportunity to get higher scores and encourage them to explore new areas.
+- Added jump power-ups to the level to allow players to reach new areas.
 - Added toon-style shader (aka Cel Shading), which has been applied to some power-up objects to make them pop out a bit more. This shader may be further utilized in the next release when we redesign power-ups.
-- Cat Sounds: Added cat walking sound which plays when the player moves, and jumping sound which plays when the player jumps.
-- Background Ambiance: Added quiet room ambiance to immerse the player in the house environment.
+- Added cat walking sound which plays when the player moves, and jumping sound which plays when the player jumps.
+- Added quiet room ambiance to immerse the player in the house environment.
 - Enhanced Score Tracker UI: The score tracker UI element has been greatly improved to have better visibility, style, and reactivity to player actions.
 - Additional Sound Enhancements: Made some sounds 3D to make them less disturbing and more immersive for the player. e.g., the dog walking and barking sounds.
-- Placed More Objective Items: The gameplay has been extended by adding more breakable items for the player to cause chaos with.
+- Placed tons of objective items throughout the level for the player to cause chaos with.
 - Implemented chase logic for the Owner NPC through the NavMesh.
 - Set up Cat idle and walk animations through Mecanim.
 - Set up hinge door prefab (the owner's bedroom has a hinge door that swings open when the owner walks through it).

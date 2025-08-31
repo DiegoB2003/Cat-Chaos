@@ -25,3 +25,4 @@ Team Members: Arlette Diaz, Nick Filipov, **Diego Bravo**
 - Implemented chase logic for the Owner NPC through the NavMesh.
 - Set up Cat idle and walk animations through Mecanim.
 - Set up hinge door prefab (the owner's bedroom has a hinge door that swings open when the owner walks through it).
+- Added background music and implemented logic to trigger chase music to make chases intense.

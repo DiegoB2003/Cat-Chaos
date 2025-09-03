@@ -1,11 +1,10 @@
 # Cat-Chaos
-This game was developed for an Undergraduate project at the University of Illinois at Chicago in a CS 426 course.
 
 [Design Document](https://docs.google.com/document/d/1CFu6U85XrUEFJIyIWUjvCOGbUwl8SkGE5plIKW824DA/edit?usp=sharing)
 
 Team Members: Arlette Diaz, Nick Filipov, **Diego Bravo**
 
-# How To Play + Controls
+## How To Play + Controls
 - You must be a mischievous cat by destroying fragile objects (currently only ceramic objects like cups) around the house without getting caught by the owner.
 - Many actions, such as breaking items, moving, and getting near the dog, will contribute to a noise meter, triggering the owner to chase you if you are too loud.
 - Use **WASD** for forward, right, back, and left movement.
@@ -14,7 +13,7 @@ Team Members: Arlette Diaz, Nick Filipov, **Diego Bravo**
 - **Left Mouse Click** (recently implemented for public demo) will push objects in front of you.
 - Press **E** to interact with power-ups around the level.
 
-### My contributions:
+## My contributions:
 - Added jump power-ups to the level to allow players to reach new areas.
 - Added toon-style shader (aka Cel Shading), which has been applied to some power-up objects to make them pop out a bit more. This shader may be further utilized in the next release when we redesign power-ups.
 - Added cat walking sound which plays when the player moves, and jumping sound which plays when the player jumps.
@@ -26,3 +25,5 @@ Team Members: Arlette Diaz, Nick Filipov, **Diego Bravo**
 - Set up Cat idle and walk animations through Mecanim.
 - Set up hinge door prefab (the owner's bedroom has a hinge door that swings open when the owner walks through it).
 - Added background music and implemented logic to trigger chase music to make chases intense.
+
+This game was developed for an Undergraduate project at the University of Illinois at Chicago in a CS 426 course.

@@ -4,6 +4,8 @@
 
 Team Members: Arlette Diaz, Nick Filipov, **Diego Bravo**
 
+Download [here](https://github.com/DiegoB2003/Cat-Chaos/releases/tag/v1.0.0)
+
 ## How To Play + Controls
 - You must be a mischievous cat by destroying fragile objects (currently only ceramic objects like cups) around the house without getting caught by the owner.
 - Many actions, such as breaking items, moving, and getting near the dog, will contribute to a noise meter, triggering the owner to chase you if you are too loud.
